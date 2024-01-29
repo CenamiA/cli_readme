@@ -7,8 +7,8 @@ function licenseBadge(license) {
     return "License: None";
   } else if (license == "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]`;
-  } else if(license == "Apache 2.0"){
-    return `[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)]`;
+  } else if(license == "APACHE 2.0"){
+    return `[![License: APACHE 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)]`;
   } else if (license == "GNU"){
     return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-red.svg)]`;
   } else if(license == "BSD 3"){
