@@ -14,7 +14,7 @@
 ## Description
 Creating an interactive README using command line interface
 ## Usage
-Run node index.js and follow the intructions
+Run node index.js and follow the instructions
 ## License
 MIT
 
