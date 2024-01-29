@@ -33,9 +33,51 @@ function licenseLink(license) {
   } 
 }
 
+// Function for license notice which will lead to license websites
+
+function licenseNotice(license) {
+  if (license === "None") {
+    return "";
+  } else {
+    return `
+  ${licenseLink(license)} 
+    `
+  }
+}
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${licenseBadge(data.license)}
+
+## Table of Contents
+* [Description](#description)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Dependencies](#dependencies)
+* [Tests](#tests)
+* [Credits](#credits)
+* [Questions](#questions)
+
+## Description
+${data.description}
+## Usage
+${data.usage}
+## License
+${data.license}\n
+${licenseNotice(data.license)}
+## Contribution 
+${data.contribution}
+## Dependencies
+${data.dependencies}
+## Tests
+${data.tests}
+## Credits
+${data.credits}
+## Questions
+GitHub: ${data.github} (https://github.com/${data.github})\n
+Email address: ${data.email}
 
 `;
 }
