@@ -99,11 +99,28 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err)=>{
+     if (err){
+        console.log(err)
+     } else{
+        console.log("Your README file is ready!")
+     }
+    })
 }
+
+console.log("README Generator");
 
 // function to initialize program
 function init() {
-
+    inquirer
+    .prompt(questions)/* Pass your questions in here */
+     
+    .then((answers) => {
+      // Use user feedback for... whatever!!
+      console.log(answers)
+      const readmeContent = generateMarkdown(answers);
+      writeToFile("myREADME.md",readmeContent)
+    })
 }
 
 // function call to initialize program
